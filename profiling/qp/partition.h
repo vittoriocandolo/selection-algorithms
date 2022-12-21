@@ -1,0 +1,1 @@
+extern int partition(int *a, int p, int q);

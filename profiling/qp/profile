@@ -1,0 +1,6 @@
+#!/bin/bash
+gcc qs_profiling.c -Wall -o qp -lm -include pcg_basic.c -include swap.c -include partition.c -include quick_select.c -include quick_select_r.c
+./qp
+cat qs.csv > qp.csv
+tail -n +2 qs_r.csv >> qp.csv
+Rscript qp_script.R

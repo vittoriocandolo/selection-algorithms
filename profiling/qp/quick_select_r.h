@@ -1,0 +1,1 @@
+extern int quick_select_r(int *a, int p, int q, int i);

@@ -1,0 +1,7 @@
+#!/bin/bash
+gcc profiling.c -Wall -o sp -lm -include pcg_basic.c -include swap.c -include partition.c -include quick_select.c -include heap_select.c -include median_of_medians_select.c
+./sp
+cat qs.csv > profiling.csv
+tail -n +2 hs.csv >> profiling.csv
+tail -n +2 ms.csv >> profiling.csv
+Rscript script.R
